@@ -1,0 +1,26 @@
+{
+  "name": "paskho",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:prod": "cd server && npm run start:prod",
+    "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install && npm run build && npm run db migrate && cd ..",
+    "prepare": "husky install",
+    "pre-commit": "cd server && npm run pre-commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onedev111/communitymade_api_dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onedev111/communitymade_api_dev/issues"
+  },
+  "homepage": "https://github.com/onedev111/communitymade_api_dev#readme",
+  "dependencies": {
+    "husky": "^6.0.0"
+  }
+}

@@ -1,0 +1,106 @@
+@tailwind base;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #b1ceff;
+}
+
+.react-select input:focus {
+  box-shadow: none;
+}
+
+@tailwind components;
+
+@layer components {
+  .input {
+    @apply px-2 h-9 border border-gray-400 w-56 rounded;
+  }
+
+  .link {
+    @apply inline text-blue-600;
+  }
+
+  .link:hover {
+    @apply underline;
+  }
+
+  .checkbox {
+    @apply relative inline-block w-5 h-5 appearance-none border border-gray-400 rounded;
+  }
+
+  .checkbox:checked {
+    @apply bg-blue-500;
+  }
+
+  .checkbox:checked:after {
+    content: '';
+    left: 6px;
+    top: 3px;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    width: 5px;
+    height: 10px;
+    transform: rotate(45deg);
+    @apply absolute border-white;
+  }
+
+  .btn-primary {
+    @apply cursor-pointer text-white py-2 px-5 border-b-4 border-blue-600 rounded-md bg-blue-500 font-bold hover:bg-blue-600;
+  }
+
+  .btn-primary-outline {
+    @apply cursor-pointer text-blue-600 py-2 px-5 rounded-md border border-blue-600 hover:bg-blue-50;
+  }
+
+  .btn-primary-flat {
+    @apply cursor-pointer text-blue-600 py-2 px-5 rounded-md hover:bg-blue-100;
+  }
+
+  .btn-secondary {
+    @apply cursor-pointer text-white py-2 px-5 border-b-4 border-gray-600 rounded-md bg-gray-500 font-bold hover:bg-gray-600;
+  }
+
+  .btn-secondary-outline {
+    @apply cursor-pointer text-gray-600 py-2 px-5 rounded-md border border-gray-600 hover:bg-gray-50;
+  }
+
+  .btn-secondary-flat {
+    @apply cursor-pointer text-gray-600 py-2 px-5 rounded-md hover:bg-gray-100;
+  }
+
+  .btn-success {
+    @apply cursor-pointer text-white py-2 px-5 border-b-4 border-green-600 rounded-md bg-green-500 font-bold hover:bg-green-600;
+  }
+
+  .btn-danger {
+    @apply cursor-pointer text-white py-2 px-5 border-b-4 border-red-600 rounded-md bg-red-500 font-bold hover:bg-red-600;
+  }
+
+  .btn-danger-outline {
+    @apply cursor-pointer text-red-600 py-2 px-5 rounded-md border border-red-600 hover:bg-red-50;
+  }
+
+  .btn-danger-flat {
+    @apply cursor-pointer text-red-600 py-2 px-5 rounded-md hover:bg-red-100;
+  }
+}
+
+@tailwind utilities;
